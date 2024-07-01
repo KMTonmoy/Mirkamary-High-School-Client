@@ -5,6 +5,7 @@ import About from "../Pages/About/About";
 import Contact from "../Pages/ContactPage/Contact";
 import Signup from "../Pages/Signup/Signup";
 import Login from "../Pages/Login/Login";
+import Error from "../Pages/Error/Error";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +32,16 @@ export const router = createBrowserRouter([
                 path: '/Login',
                 element: <Login />,
             },
+            {
+                path: '*',
+                element: <Error />,
+            },
         ]
     },
+    {
+
+        path: '*',
+        element: <Error />,
+
+    }
 ]);

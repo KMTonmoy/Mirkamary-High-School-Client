@@ -92,28 +92,23 @@ const AuthProvider = ({ children }) => {
 
     const saveUser = async (user) => {
         try {
-   
+
             const existingUserResponse = await axios.get(
                 `${import.meta.env.VITE_API_URL}/users/${user?.email}`
             );
             const existingUser = existingUserResponse.data;
 
-           
+
             if (existingUser) {
-           
+
                 return existingUser;
             }
 
-            
+
             const currentUser = {
                 email: user?.email,
                 name: user.displayName,
-                role: 'user',
-                status: 'Verified',
-                floorNo: "none",
-                blockName: "none",
-                apartmentNo: "none",
-                rent: "none",
+                role: 'student',
             };
             const { data } = await axios.put(
                 `${import.meta.env.VITE_API_URL}/user`,
