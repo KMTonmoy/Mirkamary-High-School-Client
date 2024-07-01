@@ -1,0 +1,17 @@
+[
+    {
+        "image": "https://www.eui.eu/Content-Types-Assets/Web-Unit/Student-in-law-library-section.x7622d211.jpg?w=1920&h=1080",
+        "title": "Banner Title 1",
+        "description": "Banner Description 1"
+    },
+    {
+        "image": "https://www.princeton.edu/sites/default/files/styles/1x_full_2x_half_crop/public/images/2017/12/20170509_Eng_Library_DJA_012_3.jpg?itok=-WaXTWX8",
+        "title": "Banner Title 2",
+        "description": "Banner Description 2"
+    },
+    {
+        "image": "https://www.state.gov/wp-content/uploads/2019/04/shutterstock_83045623-e1555360482941.jpg",
+        "title": "Banner Title 2",
+        "description": "Banner Description 2"
+    }
+]
