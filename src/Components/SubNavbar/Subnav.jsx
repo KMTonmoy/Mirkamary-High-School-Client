@@ -44,6 +44,9 @@ const Subnav = () => {
         <nav className="bg-gray-800">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="flex justify-start space-x-6 py-4">
+                    <NavLink className="text-white px-3 py-2 rounded-md text-sm font-medium" to="/">
+                        Home
+                    </NavLink>
                     <div className="relative" ref={academicMenuRef}>
                         <button
                             onClick={toggleAcademicMenu}
@@ -65,7 +68,7 @@ const Subnav = () => {
                             </svg>
                         </button>
                         {isAcademicMenuOpen && (
-                            <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                            <div className="origin-top-right absolute right-0 mt-2 w-60 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                                 <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                     <NavLink
                                         to="/managing-committee"
@@ -95,13 +98,7 @@ const Subnav = () => {
                                     >
                                         All Student Information
                                     </NavLink>
-                                    <NavLink
-                                        to="/all-headmaster"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
-                                    >
-                                        All Headmaster
-                                    </NavLink>
+
                                     <NavLink
                                         to="/all-success-student-information"
                                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"

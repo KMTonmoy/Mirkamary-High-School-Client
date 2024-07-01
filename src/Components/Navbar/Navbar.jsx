@@ -27,9 +27,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-800 p-4 relative z-50">
+        <nav className="border-b bg-gray-800 p-4 relative z-50">
             <div className="max-w-7xl mx-auto flex justify-between items-center relative z-50">
-                {/* Logo and School Name */}
+      
                 <div className="flex items-center">
                     <img
                         className="h-12 rounded-full"
@@ -51,7 +51,7 @@ const Navbar = () => {
                                 className="relative z-50 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium focus:outline-none"
                             >
                                 <img
-                                    className="h-8 w-8 rounded-full"
+                                    className="h-auto w-11 rounded-full"
                                     src={user.photoURL || 'https://via.placeholder.com/40'}
                                     alt="User"
                                 />
