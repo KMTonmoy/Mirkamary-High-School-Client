@@ -6,6 +6,7 @@ import Contact from "../Pages/ContactPage/Contact";
 import Signup from "../Pages/Signup/Signup";
 import Login from "../Pages/Login/Login";
 import Error from "../Pages/Error/Error";
+import TeacherDetails from "../Components/TeacherDetails/TeacherDetails";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +32,11 @@ export const router = createBrowserRouter([
             {
                 path: '/Login',
                 element: <Login />,
+            },
+            {
+                path: '/teacher/:id',
+                element: <TeacherDetails />,
+                loader: ({ params }) => fetch(`http://localhost:8000/teacher/${params.id}`)
             },
             {
                 path: '*',

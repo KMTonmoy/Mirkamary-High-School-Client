@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const OurTeachers = () => {
     const [teachersData, setTeachersData] = useState([]);
@@ -43,7 +44,9 @@ const OurTeachers = () => {
                                 <h3 className="text-lg font-semibold">{teacher.name}</h3>
                                 <p className="text-gray-600 mb-2">{teacher.role}</p>
                                 <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300">
-                                    Details
+                                    <Link to={`teacher/${teacher._id}`}>
+                                        Details
+                                    </Link>
                                 </button>
                             </div>
                         </div>
