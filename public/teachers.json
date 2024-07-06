@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "MD.ABDURRAZZAQUE",
+        "role": "Head Teacher",
+        "image": "https://school360.xyz/200525/200525_media/teacher/Teacher_1692681932_2023-08-22.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam arcu at libero."
+    },
+    {
+        "id": 2,
+        "name": "MARUF MD. AHSANUZZAMAN",
+        "role": "Asst. Teacher",
+        "image": "https://school360.xyz/200525/200525_media/teacher/t_1693732820_2023-09-03.jpg",
+        "details": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+    },
+    {
+        "id": 3,
+        "name": "MOHAMMAD AYYUB ALI",
+        "role": "Asst. Teacher",
+        "image": "https://school360.xyz/200525/200525_media/teacher/t_1693732444_2023-09-03.jpg",
+        "details": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."
+    }
+]

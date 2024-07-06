@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
     const logOut = async () => {
         setLoading(true);
         try {
-            await axios.get(`${import.meta.env.VITE_API_URL}/logout`, {
+            await axios.get(`http://localhost:8000/logout`, {
                 withCredentials: true,
             });
             await signOut(auth);
@@ -78,7 +78,7 @@ const AuthProvider = ({ children }) => {
     const getToken = async (email) => {
         try {
             const { data } = await axios.post(
-                `${import.meta.env.VITE_API_URL}/jwt`,
+                `http://localhost:8000/jwt`,
                 { email },
                 { withCredentials: true }
             );
@@ -89,21 +89,16 @@ const AuthProvider = ({ children }) => {
         }
     };
 
-
     const saveUser = async (user) => {
         try {
-
             const existingUserResponse = await axios.get(
-                `${import.meta.env.VITE_API_URL}/users/${user?.email}`
+                `http://localhost:8000/users/${user?.email}`
             );
             const existingUser = existingUserResponse.data;
 
-
             if (existingUser) {
-
                 return existingUser;
             }
-
 
             const currentUser = {
                 email: user?.email,
@@ -111,18 +106,15 @@ const AuthProvider = ({ children }) => {
                 role: 'student',
             };
             const { data } = await axios.put(
-                `${import.meta.env.VITE_API_URL}/user`,
+                `http://localhost:8000/user`,
                 currentUser
             );
-            // // console.log("User saved:", data);
             return data;
         } catch (error) {
             console.error("Error saving user:", error);
             throw error;
         }
     };
-
-
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {

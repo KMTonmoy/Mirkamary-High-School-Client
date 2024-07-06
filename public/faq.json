@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "What is the school's mission?",
+        "answer": "Our mission is to provide quality education and holistic development for students."
+    },
+    {
+        "id": 2,
+        "question": "How can parents get involved?",
+        "answer": "Parents can get involved through parent-teacher associations, volunteering, and attending school events."
+    },
+    {
+        "id": 3,
+        "question": "What extracurricular activities are offered?",
+        "answer": "We offer a variety of extracurricular activities including sports, music, drama, and clubs."
+    },
+    {
+        "id": 4,
+        "question": "What are the school's core values?",
+        "answer": "Our core values include respect, integrity, responsibility, and excellence."
+    },
+    {
+        "id": 5,
+        "question": "How is student progress monitored?",
+        "answer": "Student progress is monitored through regular assessments, parent-teacher conferences, and academic reports."
+    }
+]
