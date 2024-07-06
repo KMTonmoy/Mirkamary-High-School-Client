@@ -6,7 +6,7 @@ const OurTeachers = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('teachers.json');
+                const response = await fetch('http://localhost:8000/teacher');
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }

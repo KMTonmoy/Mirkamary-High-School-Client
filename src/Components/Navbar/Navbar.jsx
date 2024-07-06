@@ -131,7 +131,11 @@ const Navbar = () => {
 
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 border-t border-gray-700">
                 <div className="flex justify-center md:justify-start flex-wrap space-x-6 py-4">
-                    <NavLink className="text-white px-3 py-2 rounded-md text-sm font-medium" to="/" exact>
+                    <NavLink
+                        className={({ isActive }) => `text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-gray-700' : ''}`}
+                        to="/"
+                        exact="true"
+                    >
                         Home
                     </NavLink>
                     <div className="relative" ref={academicMenuRef}>
@@ -165,37 +169,31 @@ const Navbar = () => {
                                 <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                     <NavLink
                                         to="/managing-committee"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
                                         Managing Committee
                                     </NavLink>
                                     <NavLink
                                         to="/teachers-information"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
                                         Teacher's Information
                                     </NavLink>
                                     <NavLink
                                         to="/admin-staff"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
                                         Admin/Staff
                                     </NavLink>
                                     <NavLink
                                         to="/all-student-information"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
                                         All Student Information
                                     </NavLink>
-
                                     <NavLink
                                         to="/all-success-student-information"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
                                         All Success Student Information
                                     </NavLink>
@@ -233,65 +231,56 @@ const Navbar = () => {
                             >
                                 <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                     <NavLink
-                                        to="/important-website-link"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        to="/notice"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
-                                        Important Website Link
+                                        Notice
                                     </NavLink>
                                     <NavLink
-                                        to="/teachers-class-routine"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        to="/class-routine"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
-                                        Teacher's Class Routine
+                                        Class Routine
                                     </NavLink>
                                     <NavLink
-                                        to="/teachers-attendance-information"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        to="/exam-routine"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
-                                        Teacher's Attendance Information
+                                        Exam Routine
                                     </NavLink>
                                     <NavLink
-                                        to="/calendar"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        to="/events"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
-                                        Calendar
+                                        Events
                                     </NavLink>
                                     <NavLink
-                                        to="/attendance-information"
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        activeClassName="bg-gray-100"
+                                        to="/achievement"
+                                        className={({ isActive }) => `block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${isActive ? 'bg-gray-100' : ''}`}
                                     >
-                                        Attendance Information
+                                        Achievement
                                     </NavLink>
                                 </div>
                             </motion.div>
                         )}
                     </div>
                     <NavLink
-                        className="text-white px-3 py-2 rounded-md text-sm font-medium"
-                        to="/admission-information"
-                        activeClassName="bg-gray-700"
+                        className={({ isActive }) => `text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-gray-700' : ''}`}
+                        to="/online-admission"
                     >
-                        Admission Information
-                    </NavLink>
-
-                    <NavLink
-                        className="text-white px-3 py-2 rounded-md text-sm font-medium"
-                        to="/contact"
-                        activeClassName="bg-gray-700"
-                    >
-                        Contact Us
+                        Online Admission
                     </NavLink>
                     <NavLink
-                        className="text-white px-3 py-2 rounded-md text-sm font-medium"
-                        to="/about-us"
-                        activeClassName="bg-gray-700"
+                        className={({ isActive }) => `text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-gray-700' : ''}`}
+                        to="/board-result"
                     >
-                        About Us
+                        Board Result
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) => `text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-gray-700' : ''}`}
+                        to="/student-portal"
+                    >
+                        Student Portal
                     </NavLink>
                 </div>
             </div>
@@ -299,6 +288,4 @@ const Navbar = () => {
     );
 };
 
-
 export default Navbar;
-
